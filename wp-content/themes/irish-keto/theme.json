@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"layout": {
+			"contentSize": "700px",
+			"wideSize": "1080px"
+		},
+		"color": {
+			"palette": [
+				{ "slug": "background", "name": "Background", "color": "#fbfaf7" },
+				{ "slug": "foreground", "name": "Foreground", "color": "#1f2320" },
+				{ "slug": "primary", "name": "Primary (Irish green)", "color": "#0b5d3b" },
+				{ "slug": "accent", "name": "Accent (carb-warning amber)", "color": "#b5651d" },
+				{ "slug": "muted", "name": "Muted", "color": "#e7e3d8" }
+			]
+		},
+		"typography": {
+			"fontSizes": [
+				{ "slug": "small", "name": "Small", "size": "0.875rem" },
+				{ "slug": "medium", "name": "Medium", "size": "1rem" },
+				{ "slug": "large", "name": "Large", "size": "1.5rem" },
+				{ "slug": "x-large", "name": "Extra Large", "size": "2.25rem" }
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				}
+			}
+		}
+	},
+	"templateParts": [
+		{ "name": "header", "title": "Header", "area": "header" },
+		{ "name": "footer", "title": "Footer", "area": "footer" },
+		{ "name": "disclaimer", "title": "Dietary Disclaimer", "area": "uncategorized" }
+	]
+}

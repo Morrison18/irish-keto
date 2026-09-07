@@ -1,0 +1,37 @@
+# WP Engine tracks only our own theme + plugin. Core, uploads, third-party
+# plugins, and local-only files are never committed.
+
+# Ignore everything at the root by default
+/*
+
+# ...except these
+!.gitignore
+!README.md
+!wp-content/
+
+# Inside wp-content, ignore everything except our own theme/plugin dirs
+wp-content/*
+!wp-content/themes/
+!wp-content/plugins/
+
+wp-content/themes/*
+!wp-content/themes/irish-keto/
+
+wp-content/plugins/*
+!wp-content/plugins/irish-keto-core/
+
+# Never track uploads, cache, or the local SQLite DB even if paths shift
+wp-content/uploads/
+wp-content/cache/
+wp-content/database/
+wp-content/db.php
+
+# Secrets / local config
+wp-config.php
+.env
+.env.*
+
+# OS / editor cruft
+.DS_Store
+.vscode/
+*.log

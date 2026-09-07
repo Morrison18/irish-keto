@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "irish-keto/recipe-facts",
+	"title": "Recipe Facts",
+	"category": "widgets",
+	"icon": "carrot",
+	"description": "Displays net carbs, protein, fat, and calories for the current recipe.",
+	"textdomain": "irish-keto-core",
+	"usesContext": [ "postId", "postType" ],
+	"render": "file:./render.php",
+	"supports": {
+		"html": false
+	}
+}
