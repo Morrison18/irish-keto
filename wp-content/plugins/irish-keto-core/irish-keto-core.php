@@ -22,6 +22,7 @@ require_once IRISH_KETO_CORE_DIR . 'includes/class-recipe-schema.php';
 require_once IRISH_KETO_CORE_DIR . 'includes/class-blocks.php';
 require_once IRISH_KETO_CORE_DIR . 'includes/class-taxonomies.php';
 require_once IRISH_KETO_CORE_DIR . 'includes/class-media.php';
+require_once IRISH_KETO_CORE_DIR . 'includes/class-bmr-calculator.php';
 
 Irish_Keto_Core\Post_Types::init();
 Irish_Keto_Core\Post_Meta::init();

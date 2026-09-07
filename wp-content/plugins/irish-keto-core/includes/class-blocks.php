@@ -15,5 +15,6 @@ class Blocks {
 
 	public static function register(): void {
 		register_block_type( IRISH_KETO_CORE_DIR . 'blocks/recipe-facts' );
+		register_block_type( IRISH_KETO_CORE_DIR . 'blocks/meal-planner' );
 	}
 }

@@ -1,0 +1,96 @@
+.irish-keto-meal-planner {
+	max-width: 640px;
+}
+
+.irish-keto-meal-planner fieldset {
+	border: 1px solid var(--wp--preset--color--muted);
+	border-radius: 4px;
+	padding: 1.25rem;
+	margin: 0 0 1.5rem;
+}
+
+.irish-keto-meal-planner legend {
+	font-family: var(--wp--preset--font-family--heading);
+	font-weight: 600;
+	padding: 0 0.5rem;
+}
+
+.irish-keto-meal-planner__row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.irish-keto-meal-planner__row:last-child {
+	margin-bottom: 0;
+}
+
+.irish-keto-meal-planner__row label {
+	display: block;
+	font-size: 0.875rem;
+	margin-bottom: 0.25rem;
+}
+
+.irish-keto-meal-planner__row input[type="number"],
+.irish-keto-meal-planner__row input[type="text"],
+.irish-keto-meal-planner__row select {
+	display: block;
+	padding: 0.5rem;
+	border: 1px solid var(--wp--preset--color--muted);
+	border-radius: 3px;
+	min-width: 160px;
+}
+
+.irish-keto-meal-planner__gp-gate {
+	background: var(--wp--preset--color--muted);
+	border-left: 3px solid var(--wp--preset--color--accent);
+	padding: 1rem 1.25rem;
+	margin-bottom: 1.5rem;
+	font-size: 0.9rem;
+}
+
+.irish-keto-meal-planner__error {
+	color: var(--wp--preset--color--accent);
+	font-weight: 600;
+}
+
+.irish-keto-meal-planner button[type="submit"] {
+	background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--background);
+	border: none;
+	border-radius: 2px;
+	padding: 0.75rem 1.75rem;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.irish-keto-meal-planner__results {
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 2px solid var(--wp--preset--color--muted);
+}
+
+.irish-keto-meal-planner__results[hidden] {
+	display: none;
+}
+
+.irish-keto-meal-planner__stats,
+.irish-keto-meal-planner__macros,
+.irish-keto-meal-planner__recipes {
+	list-style: none;
+	margin: 0 0 1.5rem;
+	padding: 0;
+}
+
+.irish-keto-meal-planner__stats li,
+.irish-keto-meal-planner__macros li {
+	padding: 0.4rem 0;
+	border-bottom: 1px solid var(--wp--preset--color--muted);
+}
+
+.irish-keto-meal-planner__note {
+	font-size: 0.8rem;
+	opacity: 0.7;
+}

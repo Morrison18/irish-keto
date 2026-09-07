@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "irish-keto/meal-planner",
+	"title": "Meal Planner",
+	"category": "widgets",
+	"icon": "carrot",
+	"description": "BMR/TDEE calculator with diet, goal, and food preference intake, gated behind a GP-consult acknowledgement.",
+	"textdomain": "irish-keto-core",
+	"render": "file:./render.php",
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js",
+	"supports": {
+		"html": false
+	}
+}
