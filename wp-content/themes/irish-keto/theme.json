@@ -4,24 +4,38 @@
 	"settings": {
 		"appearanceTools": true,
 		"layout": {
-			"contentSize": "700px",
-			"wideSize": "1080px"
+			"contentSize": "720px",
+			"wideSize": "1100px"
 		},
 		"color": {
 			"palette": [
-				{ "slug": "background", "name": "Background", "color": "#fbfaf7" },
-				{ "slug": "foreground", "name": "Foreground", "color": "#1f2320" },
-				{ "slug": "primary", "name": "Primary (Irish green)", "color": "#0b5d3b" },
-				{ "slug": "accent", "name": "Accent (carb-warning amber)", "color": "#b5651d" },
-				{ "slug": "muted", "name": "Muted", "color": "#e7e3d8" }
+				{ "slug": "background", "name": "Background (cream)", "color": "#faf7f2" },
+				{ "slug": "foreground", "name": "Foreground (ink)", "color": "#2b2622" },
+				{ "slug": "primary", "name": "Primary (field green)", "color": "#2f4d33" },
+				{ "slug": "accent", "name": "Accent (butcher rust)", "color": "#a8442d" },
+				{ "slug": "gold", "name": "Gold (brass)", "color": "#b08d3e" },
+				{ "slug": "muted", "name": "Muted (stone)", "color": "#efe9dd" },
+				{ "slug": "card", "name": "Card surface", "color": "#ffffff" }
 			]
 		},
 		"typography": {
+			"fontFamilies": [
+				{
+					"slug": "heading",
+					"name": "Fraunces",
+					"fontFamily": "'Fraunces', ui-serif, Georgia, serif"
+				},
+				{
+					"slug": "body",
+					"name": "Inter",
+					"fontFamily": "'Inter', ui-sans-serif, system-ui, sans-serif"
+				}
+			],
 			"fontSizes": [
 				{ "slug": "small", "name": "Small", "size": "0.875rem" },
 				{ "slug": "medium", "name": "Medium", "size": "1rem" },
-				{ "slug": "large", "name": "Large", "size": "1.5rem" },
-				{ "slug": "x-large", "name": "Extra Large", "size": "2.25rem" }
+				{ "slug": "large", "name": "Large", "size": "1.75rem" },
+				{ "slug": "x-large", "name": "Extra Large", "size": "2.75rem" }
 			]
 		}
 	},
@@ -30,10 +44,28 @@
 			"background": "var(--wp--preset--color--background)",
 			"text": "var(--wp--preset--color--foreground)"
 		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)"
+		},
 		"elements": {
 			"link": {
 				"color": {
 					"text": "var(--wp--preset--color--primary)"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "600"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--background)"
+				},
+				"border": {
+					"radius": "2px"
 				}
 			}
 		}

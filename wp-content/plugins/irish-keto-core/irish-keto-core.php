@@ -21,11 +21,13 @@ require_once IRISH_KETO_CORE_DIR . 'includes/class-post-meta.php';
 require_once IRISH_KETO_CORE_DIR . 'includes/class-recipe-schema.php';
 require_once IRISH_KETO_CORE_DIR . 'includes/class-blocks.php';
 require_once IRISH_KETO_CORE_DIR . 'includes/class-taxonomies.php';
+require_once IRISH_KETO_CORE_DIR . 'includes/class-media.php';
 
 Irish_Keto_Core\Post_Types::init();
 Irish_Keto_Core\Post_Meta::init();
 Irish_Keto_Core\Recipe_Schema::init();
 Irish_Keto_Core\Blocks::init();
 Irish_Keto_Core\Taxonomies::init();
+Irish_Keto_Core\Media::init();
 
 register_activation_hook( __FILE__, [ 'Irish_Keto_Core\\Taxonomies', 'activate' ] );

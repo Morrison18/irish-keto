@@ -35,7 +35,7 @@ class Post_Meta {
 					'single'            => true,
 					'show_in_rest'      => true,
 					'default'           => 0,
-					'sanitize_callback' => 'floatval',
+					'sanitize_callback' => [ __CLASS__, 'sanitize_float' ],
 					'auth_callback'     => static fn(): bool => current_user_can( 'edit_posts' ),
 				]
 			);
@@ -79,7 +79,7 @@ class Post_Meta {
 				'label'             => __( 'Retailer', 'irish-keto-core' ),
 				'single'            => true,
 				'show_in_rest'      => true,
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => [ __CLASS__, 'sanitize_string' ],
 				'auth_callback'     => static fn(): bool => current_user_can( 'edit_posts' ),
 			]
 		);
@@ -92,7 +92,7 @@ class Post_Meta {
 				'label'             => __( 'Brand', 'irish-keto-core' ),
 				'single'            => true,
 				'show_in_rest'      => true,
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => [ __CLASS__, 'sanitize_string' ],
 				'auth_callback'     => static fn(): bool => current_user_can( 'edit_posts' ),
 			]
 		);
@@ -105,7 +105,7 @@ class Post_Meta {
 				'label'             => __( 'Pack size (g)', 'irish-keto-core' ),
 				'single'            => true,
 				'show_in_rest'      => true,
-				'sanitize_callback' => 'floatval',
+				'sanitize_callback' => [ __CLASS__, 'sanitize_float' ],
 				'auth_callback'     => static fn(): bool => current_user_can( 'edit_posts' ),
 			]
 		);
@@ -120,7 +120,7 @@ class Post_Meta {
 				'label'             => __( 'Net carbs per 100g', 'irish-keto-core' ),
 				'single'            => true,
 				'show_in_rest'      => true,
-				'sanitize_callback' => 'floatval',
+				'sanitize_callback' => [ __CLASS__, 'sanitize_float' ],
 				'auth_callback'     => static fn(): bool => current_user_can( 'edit_posts' ),
 			]
 		);
@@ -133,7 +133,7 @@ class Post_Meta {
 				'label'             => __( 'Price (EUR)', 'irish-keto-core' ),
 				'single'            => true,
 				'show_in_rest'      => true,
-				'sanitize_callback' => 'floatval',
+				'sanitize_callback' => [ __CLASS__, 'sanitize_float' ],
 				'auth_callback'     => static fn(): bool => current_user_can( 'edit_posts' ),
 			]
 		);
@@ -146,9 +146,23 @@ class Post_Meta {
 				'label'             => __( 'Last verified (YYYY-MM-DD)', 'irish-keto-core' ),
 				'single'            => true,
 				'show_in_rest'      => true,
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => [ __CLASS__, 'sanitize_string' ],
 				'auth_callback'     => static fn(): bool => current_user_can( 'edit_posts' ),
 			]
 		);
+	}
+
+	/**
+	 * register_post_meta() calls sanitize_callback with 4 args (value, meta
+	 * key, object type, object subtype). Native PHP functions like floatval()
+	 * only accept 1 and throw ArgumentCountError under PHP 8+, so these wrap
+	 * them instead of passing the bare function name.
+	 */
+	public static function sanitize_float( mixed $value ): float {
+		return floatval( $value );
+	}
+
+	public static function sanitize_string( mixed $value ): string {
+		return sanitize_text_field( (string) $value );
 	}
 }
