@@ -17,7 +17,7 @@
 
 .irish-keto-card-grid > li:hover {
 	transform: translateY(-2px);
-	box-shadow: 0 6px 20px rgba(43, 38, 34, 0.08);
+	box-shadow: 0 6px 20px rgba(22, 22, 22, 0.1);
 }
 
 .irish-keto-card-grid .wp-block-post-featured-image {

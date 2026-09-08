@@ -9,12 +9,12 @@
 		},
 		"color": {
 			"palette": [
-				{ "slug": "background", "name": "Background (cream)", "color": "#faf7f2" },
-				{ "slug": "foreground", "name": "Foreground (ink)", "color": "#2b2622" },
-				{ "slug": "primary", "name": "Primary (field green)", "color": "#2f4d33" },
-				{ "slug": "accent", "name": "Accent (butcher rust)", "color": "#a8442d" },
-				{ "slug": "gold", "name": "Gold (brass)", "color": "#b08d3e" },
-				{ "slug": "muted", "name": "Muted (stone)", "color": "#efe9dd" },
+				{ "slug": "background", "name": "Background (white)", "color": "#ffffff" },
+				{ "slug": "foreground", "name": "Foreground (black)", "color": "#161616" },
+				{ "slug": "primary", "name": "Primary (block red)", "color": "#a6192e" },
+				{ "slug": "accent", "name": "Accent (black)", "color": "#161616" },
+				{ "slug": "gold", "name": "Deep red (hover/shadow)", "color": "#7a0f1f" },
+				{ "slug": "muted", "name": "Muted (light grey)", "color": "#ececec" },
 				{ "slug": "card", "name": "Card surface", "color": "#ffffff" }
 			]
 		},
